@@ -25,7 +25,7 @@ public class CandaidatesController {
 		String msg=service.validateAndSave(candidatesDTO);
 		logger.info("ended validate and save "+msg+" output");
 		req.setAttribute("msg", msg);
-		return "final.jsp";
+		return "login.jsp";
 	}catch(NullPointerException e) {
 		e.printStackTrace();
 		

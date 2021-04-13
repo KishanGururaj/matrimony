@@ -17,7 +17,7 @@ body {
     background-size: 200% 100% !important;
     animation: move 10s ease infinite;
     transform: translate3d(0, 0, 0);
-/*     background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%); */
+
     height: 100vh;
     background-image:url("matrimony1.jpg")
 }
@@ -72,62 +72,5 @@ body {
     }
 }
 
-.btn {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    font-family: $font-family;
-    -webkit-appearance: none;
-    outline: 0;
-    border: 0;
-    color: white;
-    background: $color-primary;
-    transition: 0.3s;
-    
-    &:hover {
-        background: darken($color-primary, 5%);
-    }
-}
 
-@keyframes NO {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
-
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
-  }
-}
-
-@keyframes arrive {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 50px, 0);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes move {
-    0% {
-        background-position: 0 0
-    }
-
-    50% {
-        background-position: 100% 0
-    }
-
-    100% {
-        background-position: 0 0
-    }
 }

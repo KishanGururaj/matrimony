@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -19,9 +20,25 @@
 	<button
 		style="position: absolute; top: 0; right: 0; background-color: #00000029; font-weight: bolder"><a href="login.jsp">Logout</a></button>
 </header>
-${msg }
+<table style="margin-left: auto;margin-right: auto">
+<tr>
+<th> Candidate Full Name </th>
+<th> Candidate Gender </th>
+<th> Candidate Caste </th>
+<th> Candidate Salary </th>
+<th> Candidate Desire </th>
+</tr>
+<c:forEach var="entity" items="${detailsList}">
+<tr>
+<td>${entity.getCandidateFullName()}</td>
+<td>${entity.getCandidateGender()}</td>
+<td>${entity.getCandidateCaste()}</td>
+<td>${entity.getCandidateSalary()}</td>
+<td>${entity.getCandidateDesire()}</td>
+</tr>
+</c:forEach>
+</table>
 </body>
 <footer style="margin: bottom; position: absolute; bottom: 0; width: 100%; height: 60px;background-color: #fffef22b;">
-
 	ContactUs @since 2021 copyright</footer>
 </html>

@@ -7,7 +7,12 @@ import org.springframework.stereotype.Service;
 import com.wolken.wolkenapp.dao.CandidatesDAO;
 import com.wolken.wolkenapp.dto.CandidatesDTO;
 import com.wolken.wolkenapp.entity.CandidatesEntity;
+import com.wolken.wolkenapp.exception.CandidatesDobExecption;
+import com.wolken.wolkenapp.exception.CandidatesEmailException;
 import com.wolken.wolkenapp.exception.CandidatesException;
+import com.wolken.wolkenapp.exception.CandidatesGenderException;
+import com.wolken.wolkenapp.exception.CandidatesPasswordException;
+import com.wolken.wolkenapp.exception.CandidatesPhoneNoException;
 
 @Service
 public class CandidatesServiceImpl implements CandidatesService {
@@ -59,30 +64,30 @@ public class CandidatesServiceImpl implements CandidatesService {
 								}
 							} else {
 								logger.error("password is null inside validate and save");
-								throw new CandidatesException();
+								throw new CandidatesPasswordException();
 							}
 						} else {
 							logger.error("gender is null inside validate and save");
-							throw new CandidatesException();
+							throw new CandidatesGenderException();
 						}
 
 					} else {
 						logger.error("DOB is null inside validate and save");
-						throw new CandidatesException();
+						throw new CandidatesDobExecption();
 					}
 				} else {
 					logger.error("phone no is null inside validate and save");
-					throw new CandidatesException();
+					throw new CandidatesPhoneNoException();
 				}
 			} else {
 				logger.error("email Id is null inside validate and save");
-				throw new CandidatesException();
+				throw new CandidatesEmailException();
 			}
 		} else {
 			logger.error("name  is null inside validate and save");
 			throw new CandidatesException();
 		}}
-		catch(CandidatesException e) {
+		catch(CandidatesException | CandidatesDobExecption| CandidatesEmailException |CandidatesGenderException |CandidatesPasswordException |CandidatesPhoneNoException e) {
 			logger.info("entered into catch block inside validate and save ");
 			e.printStackTrace();
 		}

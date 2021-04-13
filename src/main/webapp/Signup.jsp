@@ -6,13 +6,13 @@
 <link rel="stylesheet" href="mystylesheet.css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<header>
-	<h1 label for="user__title">Dubak matrimony</h1>
+<header style="background-color: #fffef22b;">
+	<h1 label for="user__title">Kannada matrimony</h1>
 	<button
-		style="position: absolute; top: 0; right: 0; background-color: #00000029; font-weight: bolder">Log
-		out</button>
+		style="position: absolute; top: 0; right: 0; background-color: #00000029; font-weight: bolder"><a href="login.jsp">LogIn</a></button>
 </header>
 <script type="text/javascript">
+
 	function validate() {
 		var name = document.myform.candidateName.value;
 		var emailId = document.myform.candidateEmailId.value;
@@ -67,7 +67,7 @@
 <body>
 	<div></div>
 	<div>
-		<h2>New Candidate Register</h2>
+		<h2> Register Here</h2>
 		<form action="signup.do" name="myform" onsubmit="return validate()"
 			style="font-weight: bold">
 			<table style="    text-align: initial;margin-left: auto;margin-right: auto;">
@@ -91,9 +91,9 @@
 				<tr>
 					<td><label style="text-align: left; position:">
 							Candidate Gender:</label></td>
-					<td><input type="radio" id="male" name="candidateGender"
-						value="male"> <label for="male">Male</label> <input
-						type="radio" id="female" name="candidateGender" value="female">
+					<td><input type="radio" id="male" name="candidateGender" value="male"> 
+					<label for="male">Male</label> 
+					<input type="radio" id="female" name="candidateGender" value="female">
 						<label for="female">Female</label> <input type="radio" id="other"
 						name="candidateGender" value="other"> <label for="other">Other</label></td>
 				</tr>
@@ -116,6 +116,6 @@
 	</div>
 </body>
 <footer
-	style="margin: bottom; position: absolute; bottom: 0; width: 100%; height: 60px;"><>Contact
-	Us @since 2021 copyright</footer>
+	style="margin: bottom; position: absolute; bottom: 0; width: 100%; height: 60px;background-color: #fffef22b;">
+	ContactUs @since 2021 copyright</footer>
 </html>
